@@ -27,7 +27,9 @@ SECRET_KEY = 'django-insecure-j%e87pc7$5$1gdan50!@ih8!n*$%-1%u6grkptzp@h-_5wksh2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://tarea-1-rubio.herokuapp.com',
+'localhost',
+'127.0.0.1']
 
 
 # Application definition
