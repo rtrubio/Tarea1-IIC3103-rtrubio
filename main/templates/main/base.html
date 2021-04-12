@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href= "{% static 'style.css' %}">
+    <title>{% block title %} Tarea 1 {% endblock %}</title>
+</head>
+
+<body>
+    <div id="content", name="content">
+    <nav>
+        <ul>
+                <a href="/">Inicio</a>
+        </ul>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+    </div>
+</body>
+</html>
+

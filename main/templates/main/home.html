@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Tarea 1
+{% endblock %}
+
+{% block content %}
+<h1>Breaking Bad</h1>
+<ul>
+{% for temporada in seasons.BB %}
+    <li> <a href="/breakingbad/{{temporada}}/">Temporada {{temporada}}</a></li>
+{% endfor %}
+</ul>
+
+<h1>Better Call Saul</h1>
+<ul>
+{% for temporada in seasons.BCS %}
+    <li> <a href="/bettercallsaul/{{temporada}}">Temporada {{temporada}}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

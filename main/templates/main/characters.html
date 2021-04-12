@@ -1,0 +1,39 @@
+{% extends 'main/base.html' %}
+{% block title %}Personajes{% endblock %}
+
+{% block content %}
+<h1>{{personaje.0.name}}</h1>
+
+<img src="{{personaje.0.img}}" class="center">
+
+<h3>Ocupación:</h3>
+<ul>
+{% for o in personaje.0.occupation %}
+    <li>{{o}}</li>
+{% endfor %}
+</ul>
+<h3>Estado: {{personaje.0.status}}</h3>
+<h3>Apodo: {{personaje.0.nickname}}</h3>
+<h3>Interpretado por: {{personaje.0.portrayed}}</h3>
+<h3>Quotes:</h3>
+<ul>
+{% for q in quotes %}
+    <li>{{q.quote}}</li>
+{% endfor %}
+</ul>
+
+<h3>Apariciones en Breaking Bad</h3>
+<ul>
+{% for t in personaje.0.appearance %}
+    <li><a href="/breakingbad/{{t}}">Temporada {{t}}</a></li>
+{% endfor %}
+</ul>
+
+<h3>Apariciones en Better Call Saul</h3>
+<ul>
+{% for x in personaje.0.better_call_saul_appearance %}
+    <li><a href="/bettercallsaul/{{x}}">Temporada {{x}}</a></li>
+{% endfor %}
+</ul>
+
+{% endblock %}

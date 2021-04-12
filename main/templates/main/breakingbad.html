@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+{% block title %}Breaking Bad{% endblock %}
+
+{% block content %}
+<h1>Temporada {{caps1.0.season}} - Breaking Bad</h1>
+<ul>
+{% for capitulo in caps1 %}
+    <li><a href="/episodes/{{capitulo.episode_id}}">{{capitulo.title}}</a></li>
+{% endfor %}
+</ul>
+    
+{% endblock %}

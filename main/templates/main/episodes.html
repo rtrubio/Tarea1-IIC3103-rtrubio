@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+{% block title %}Episodios {{data.episodio.0.series}}{% endblock %}
+
+{% block content %}
+<h1>{{data.episodio.0.title}} - {{data.episodio.0.series}}</h1>
+<h3>Temporada: {{data.episodio.0.season}}</h3>
+<h3>Episodio: {{data.episodio.0.episode}}</h3>
+<h3>Lanzamiento: {{data.episodio.0.air_date}}</h3>
+<h3>Personajes:</h3>
+<ul>
+{% for personaje in data.personajes %}
+    <li><a href="/characters/{{personaje.2}}">{{personaje.0}}</a></li>
+{% endfor %}
+</ul>
+
+{% endblock %}
